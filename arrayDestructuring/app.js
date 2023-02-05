@@ -21,3 +21,5 @@ let second = 'john';
 [second, first] = [first, second];
 
 console.log(first, second);
+
+const bobv
