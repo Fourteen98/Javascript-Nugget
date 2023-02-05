@@ -1,33 +1,34 @@
-// Rest Operator
-// gathers/collects items
-// destructuring, functions
-// placement important, careful with the same name
-// rest when declare function, spread when invoke the function
+ // spread when invoke the function
 
-// arrays
-const fruits = ['apple', 'orange', 'lemon', 'banana'];
-const [first, second, ...restOfTheFruits] = fruits;
-console.log(first, restOfTheFruits);
+const udemy = 'udemy';
+const letters = [...udemy];
+console.log(letters);
 
-const specificFruit = restOfTheFruits.find((fruit) => fruit === 'lemon');
-console.log(specificFruit);
+const boys = ['john', 'peter', 'bob'];
 
-//objects
-const person = { name: 'john', lastName: 'smith', job: 'developer' };
-const { name, ...rest } = person;
-console.log(name, rest);
+const girls = ['susan', 'anna'];
 
-// functions
-const getAverage = (name, ...scores) => {
-  console.log(name);
-  console.log(scores);
-  const average = scores.reduce((total, item) => {
-    return total += item
-  }, 0) / scores.length;
-  console.log(average);
-}
+const bestFriend = 'arnold';
 
-// getAverage(person.name, 89, 45, 202, 101);
+const friends = [...boys, ...girls, bestFriend];
+console.log(friends);
 
-const testSCores = [23, 45, 67, 89];
-getAverage(person.name, ...testSCores);
+// copy 
+// const newFriends = friends;
+// reference
+
+const newFriends = [...friends];
+newFriends[0] = 'nancy';
+console.log(newFriends);
+console.log(friends);
+
+
+
+// ES2018 - ES8 Objects
+
+const person = { name: 'john', job: 'developer' };
+
+const newPerson = { ...person, city:'chicago', name: 'williams' };
+console.log(person);
+console.log(newPerson);
+
