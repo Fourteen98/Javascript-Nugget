@@ -5,12 +5,11 @@ btn.addEventListener('click', () => {
     addColor(3000, '.second', 'blue').then(() => {
       addColor(5000, '.third', 'green').catch((e) => {
         console.log(e);
-      })
+      });
     }).catch((e) => {
       console.log(e);
-    })
-  }).catch((e) => console.log(e))
-  
+    });
+  }).catch((e) => console.log(e));
 });
 
 function addColor(time, selector, color) {
